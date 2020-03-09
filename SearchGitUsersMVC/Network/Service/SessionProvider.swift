@@ -23,7 +23,7 @@ class SessionProvider {
         }
         
         var urlRequest = URLRequest(url: url)
-        urlRequest.addValue("Bearer 299fe800f61647ad4087a52b90fd656e8ab18f89",
+        urlRequest.addValue(auth,
                             forHTTPHeaderField: "Authorization")
         
         let session = self.session.dataTask(request: urlRequest) { (data, response, error) in
@@ -46,4 +46,9 @@ class SessionProvider {
         
         session.resume()
     }
+    
+    private lazy var auth: String = {
+        let auth = "Bearer \(Credentials.accessToken)"
+        return auth
+    }()
 }
