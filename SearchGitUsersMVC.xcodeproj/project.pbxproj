@@ -107,15 +107,12 @@
 		F06408032413DE5900CF53CF /* SearchGitUsersMVC */ = {
 			isa = PBXGroup;
 			children = (
+				F0AEFD432416E9AA00AE9D17 /* Bootstrap */,
 				F064082D2413E5FB00CF53CF /* User */,
 				F06408262413DFC000CF53CF /* Network */,
-				F06408042413DE5900CF53CF /* AppDelegate.swift */,
-				F06408062413DE5900CF53CF /* SceneDelegate.swift */,
 				F06408082413DE5900CF53CF /* ViewController.swift */,
 				F064080A2413DE5900CF53CF /* Main.storyboard */,
 				F064080D2413DE5B00CF53CF /* Assets.xcassets */,
-				F064080F2413DE5B00CF53CF /* LaunchScreen.storyboard */,
-				F06408122413DE5B00CF53CF /* Info.plist */,
 			);
 			path = SearchGitUsersMVC;
 			sourceTree = "<group>";
@@ -219,6 +216,17 @@
 				F0AEFD412416DFE100AE9D17 /* Credentials.swift */,
 			);
 			path = Credentials;
+			sourceTree = "<group>";
+		};
+		F0AEFD432416E9AA00AE9D17 /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				F06408042413DE5900CF53CF /* AppDelegate.swift */,
+				F06408062413DE5900CF53CF /* SceneDelegate.swift */,
+				F064080F2413DE5B00CF53CF /* LaunchScreen.storyboard */,
+				F06408122413DE5B00CF53CF /* Info.plist */,
+			);
+			path = Bootstrap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
