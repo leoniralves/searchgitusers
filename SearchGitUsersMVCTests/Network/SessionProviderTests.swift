@@ -9,25 +9,6 @@
 import XCTest
 @testable import SearchGitUsersMVC
 
-class MockURLSessionDataTask: URLSessionDataTaskProtocol {
-    var mockResumeCalled = false
-    func resume() {
-        mockResumeCalled = true
-    }
-}
-
-class MockURLSession: URLSessionProtocol {
-    var lastURL: URL?
-    var dataTask = MockURLSessionDataTask()
-    var data: Data?
-    
-    func dataTask(request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
-        lastURL = request.url
-        completionHandler(data, nil, nil)
-        return dataTask
-    }
-}
-
 enum MockUserService: ServiceProtocol {
     
     case query(name: String, page: Int)
