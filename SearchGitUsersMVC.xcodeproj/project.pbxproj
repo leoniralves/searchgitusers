@@ -107,12 +107,12 @@
 		F06408032413DE5900CF53CF /* SearchGitUsersMVC */ = {
 			isa = PBXGroup;
 			children = (
+				F0AEFD4B2416EF4400AE9D17 /* Resource */,
+				F0AEFD4A2416EF2900AE9D17 /* UI */,
+				F0AEFD492416EF1400AE9D17 /* Controllers */,
+				F0AEFD482416EEF200AE9D17 /* Models */,
 				F0AEFD432416E9AA00AE9D17 /* Bootstrap */,
-				F064082D2413E5FB00CF53CF /* User */,
 				F06408262413DFC000CF53CF /* Network */,
-				F06408082413DE5900CF53CF /* ViewController.swift */,
-				F064080A2413DE5900CF53CF /* Main.storyboard */,
-				F064080D2413DE5B00CF53CF /* Assets.xcassets */,
 			);
 			path = SearchGitUsersMVC;
 			sourceTree = "<group>";
@@ -227,6 +227,38 @@
 				F06408122413DE5B00CF53CF /* Info.plist */,
 			);
 			path = Bootstrap;
+			sourceTree = "<group>";
+		};
+		F0AEFD482416EEF200AE9D17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F064082D2413E5FB00CF53CF /* User */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0AEFD492416EF1400AE9D17 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F06408082413DE5900CF53CF /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F0AEFD4A2416EF2900AE9D17 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F064080A2413DE5900CF53CF /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F0AEFD4B2416EF4400AE9D17 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F064080D2413DE5B00CF53CF /* Assets.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
