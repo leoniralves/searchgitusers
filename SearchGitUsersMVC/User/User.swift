@@ -9,5 +9,8 @@
 import Foundation
 
 struct User: Decodable {
-    let name: String
+    let login: String
+}
+struct Users: Decodable {
+    let items: [User]
 }

@@ -1,0 +1,28 @@
+{
+    "total_count": 1,
+    "incomplete_results": false,
+    "items": [
+        {
+            "login": "leoniralves",
+            "id": 1810709,
+            "node_id": "MDQ6VXNlcjE4MTA3MDk=",
+            "avatar_url": "https://avatars3.githubusercontent.com/u/1810709?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/leoniralves",
+            "html_url": "https://github.com/leoniralves",
+            "followers_url": "https://api.github.com/users/leoniralves/followers",
+            "following_url": "https://api.github.com/users/leoniralves/following{/other_user}",
+            "gists_url": "https://api.github.com/users/leoniralves/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/leoniralves/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/leoniralves/subscriptions",
+            "organizations_url": "https://api.github.com/users/leoniralves/orgs",
+            "repos_url": "https://api.github.com/users/leoniralves/repos",
+            "events_url": "https://api.github.com/users/leoniralves/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/leoniralves/received_events",
+            "type": "User",
+            "site_admin": false,
+            "score": 1.0
+        }
+    ]
+}
+

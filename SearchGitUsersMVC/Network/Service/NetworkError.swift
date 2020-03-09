@@ -12,4 +12,5 @@ enum NetworkError: Error {
     case badURL
     case connectionFailure(Error)
     case noData
+    case parseError(Error)
 }

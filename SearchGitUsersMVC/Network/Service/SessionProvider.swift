@@ -38,8 +38,8 @@ class SessionProvider {
                 do {
                     let decoded = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(decoded))
-                } catch {
-                    
+                } catch(let error) {
+                    completion(.failure(.parseError(error)))
                 }
             }
         }

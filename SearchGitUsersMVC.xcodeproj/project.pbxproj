@@ -24,6 +24,7 @@
 		F06408312413E7D400CF53CF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408302413E7D400CF53CF /* NetworkError.swift */; };
 		F06408332413E88400CF53CF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408322413E88400CF53CF /* User.swift */; };
 		F06408352413EB8700CF53CF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408342413EB8700CF53CF /* HTTPMethod.swift */; };
+		F074DEB224168A1200B22103 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = F074DEB124168A1200B22103 /* user.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		F06408302413E7D400CF53CF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		F06408322413E88400CF53CF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F06408342413EB8700CF53CF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		F074DEB124168A1200B22103 /* user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		F06408272413E02D00CF53CF /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F074DEB0241689E400B22103 /* Json Mock */,
 				F064081B2413DE5B00CF53CF /* SessionProviderTests.swift */,
 			);
 			path = Network;
@@ -159,6 +162,14 @@
 				F06408322413E88400CF53CF /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		F074DEB0241689E400B22103 /* Json Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F074DEB124168A1200B22103 /* user.json */,
+			);
+			path = "Json Mock";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F074DEB224168A1200B22103 /* user.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

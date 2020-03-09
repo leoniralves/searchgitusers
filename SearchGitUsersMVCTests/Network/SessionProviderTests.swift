@@ -19,10 +19,11 @@ class MockURLSessionDataTask: URLSessionDataTaskProtocol {
 class MockURLSession: URLSessionProtocol {
     var lastURL: URL?
     var dataTask = MockURLSessionDataTask()
+    var data: Data?
     
     func dataTask(request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
         lastURL = request.url
-        completionHandler(nil, nil, nil)
+        completionHandler(data, nil, nil)
         return dataTask
     }
 }
@@ -88,6 +89,30 @@ class SessionProviderTests: XCTestCase {
             expectation.fulfill()
         }
         XCTAssertTrue(dataTask.mockResumeCalled)
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testParseJsonResponse() {
+        let bundle = Bundle(for: Self.self)
+        guard let url = bundle.url(forResource: "user", withExtension: "json") else {
+            XCTFail("Missing file: User.json")
+            return
+        }
+        let data = try? Data(contentsOf: url)
+        XCTAssertNotNil(data)
+        
+        mockURLSession.data = data
+        
+        let expectation = XCTestExpectation(description: "Request User data")
+        sessionProvider.request(type: Users.self, service: MockUserService.query(name: "leonir", page: 1)) { result in
+            switch result {
+            case .success(let users):
+                XCTAssertEqual(users.items[0].login, "leoniralves")
+            case .failure(let error):
+                XCTFail("Error: \(error)")
+            }
+            expectation.fulfill()
+        }
         wait(for: [expectation], timeout: 10.0)
     }
 }
