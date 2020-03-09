@@ -27,7 +27,7 @@
 		F074DEB224168A1200B22103 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = F074DEB124168A1200B22103 /* user.json */; };
 		F074DEB62416907000B22103 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F074DEB52416907000B22103 /* MockURLSessionDataTask.swift */; };
 		F074DEB82416908400B22103 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F074DEB72416908400B22103 /* MockURLSession.swift */; };
-		F0AEFD422416DFE100AE9D17 /* Credentials_Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD412416DFE100AE9D17 /* Credentials_Sample.swift */; };
+		F0AEFD422416DFE100AE9D17 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD412416DFE100AE9D17 /* Credentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		F074DEB124168A1200B22103 /* user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		F074DEB52416907000B22103 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		F074DEB72416908400B22103 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
-		F0AEFD412416DFE100AE9D17 /* Credentials_Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials_Sample.swift; sourceTree = "<group>"; };
+		F0AEFD412416DFE100AE9D17 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,7 +216,7 @@
 		F0AEFD402416DFCC00AE9D17 /* Credentials */ = {
 			isa = PBXGroup;
 			children = (
-				F0AEFD412416DFE100AE9D17 /* Credentials_Sample.swift */,
+				F0AEFD412416DFE100AE9D17 /* Credentials.swift */,
 			);
 			path = Credentials;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 				F06408332413E88400CF53CF /* User.swift in Sources */,
 				F06408352413EB8700CF53CF /* HTTPMethod.swift in Sources */,
 				F051407924142D5A00ED57A9 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
-				F0AEFD422416DFE100AE9D17 /* Credentials_Sample.swift in Sources */,
+				F0AEFD422416DFE100AE9D17 /* Credentials.swift in Sources */,
 				F064082F2413E62D00CF53CF /* ServiceProtocol.swift in Sources */,
 				F06408052413DE5900CF53CF /* AppDelegate.swift in Sources */,
 				F06408072413DE5900CF53CF /* SceneDelegate.swift in Sources */,
