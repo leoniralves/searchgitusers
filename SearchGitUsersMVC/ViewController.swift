@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+//        let session = SessionProvider()
+//        session.request(type: User.self, service: UserService.query("")) { (response) in
+//
+//        }
     }
 
 
