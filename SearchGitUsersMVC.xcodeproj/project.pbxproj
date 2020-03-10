@@ -13,8 +13,7 @@
 		F051407924142D5A00ED57A9 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051407824142D5A00ED57A9 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift */; };
 		F06408052413DE5900CF53CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408042413DE5900CF53CF /* AppDelegate.swift */; };
 		F06408072413DE5900CF53CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408062413DE5900CF53CF /* SceneDelegate.swift */; };
-		F06408092413DE5900CF53CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408082413DE5900CF53CF /* ViewController.swift */; };
-		F064080C2413DE5900CF53CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F064080A2413DE5900CF53CF /* Main.storyboard */; };
+		F06408092413DE5900CF53CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408082413DE5900CF53CF /* HomeViewController.swift */; };
 		F064080E2413DE5B00CF53CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F064080D2413DE5B00CF53CF /* Assets.xcassets */; };
 		F06408112413DE5B00CF53CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F064080F2413DE5B00CF53CF /* LaunchScreen.storyboard */; };
 		F064081C2413DE5B00CF53CF /* SessionProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064081B2413DE5B00CF53CF /* SessionProviderTests.swift */; };
@@ -48,8 +47,7 @@
 		F06408012413DE5900CF53CF /* SearchGitUsersMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchGitUsersMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06408042413DE5900CF53CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F06408062413DE5900CF53CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F06408082413DE5900CF53CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F064080B2413DE5900CF53CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F06408082413DE5900CF53CF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F064080D2413DE5B00CF53CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F06408102413DE5B00CF53CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F06408122413DE5B00CF53CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -396,7 +394,7 @@
 				F064082A2413E41700CF53CF /* SessionProvider.swift in Sources */,
 				F051407724142D3E00ED57A9 /* URLSession+URLSessionProtocol.swift in Sources */,
 				F06408312413E7D400CF53CF /* NetworkError.swift in Sources */,
-				F06408092413DE5900CF53CF /* ViewController.swift in Sources */,
+				F06408092413DE5900CF53CF /* HomeViewController.swift in Sources */,
 				F064082C2413E48E00CF53CF /* UserService.swift in Sources */,
 				F051407324142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift in Sources */,
 				F051407524142D0400ED57A9 /* URLSessionProtocol.swift in Sources */,
@@ -431,14 +429,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F064080A2413DE5900CF53CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F064080B2413DE5900CF53CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F064080F2413DE5B00CF53CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
