@@ -10,13 +10,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    private let homeView = HomeView()
+    
+    override func loadView() {
+        view = homeView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let session = SessionProvider()
-//        session.request(type: User.self, service: UserService.query("")) { (response) in
-//
-//        }
     }
 
 

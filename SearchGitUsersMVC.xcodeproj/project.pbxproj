@@ -27,6 +27,9 @@
 		F074DEB62416907000B22103 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F074DEB52416907000B22103 /* MockURLSessionDataTask.swift */; };
 		F074DEB82416908400B22103 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F074DEB72416908400B22103 /* MockURLSession.swift */; };
 		F0AEFD422416DFE100AE9D17 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD412416DFE100AE9D17 /* Credentials.swift */; };
+		F0AEFD802418369F00AE9D17 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD7F2418369F00AE9D17 /* HomeView.swift */; };
+		F0AEFD822418372E00AE9D17 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AEFD812418372E00AE9D17 /* HomeView.xib */; };
+		F0AEFD8624183BF800AE9D17 /* UIView+LoadViewWithXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8524183BF800AE9D17 /* UIView+LoadViewWithXib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		F074DEB52416907000B22103 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		F074DEB72416908400B22103 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		F0AEFD412416DFE100AE9D17 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		F0AEFD7F2418369F00AE9D17 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F0AEFD812418372E00AE9D17 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		F0AEFD8524183BF800AE9D17 /* UIView+LoadViewWithXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadViewWithXib.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				F0AEFD4D241819E400AE9D17 /* Home */,
+				F0AEFD8324183BC200AE9D17 /* Extensions */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -271,6 +278,7 @@
 		F0AEFD4E24181A0900AE9D17 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F0AEFD812418372E00AE9D17 /* HomeView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -278,6 +286,7 @@
 		F0AEFD4F24181A2700AE9D17 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F0AEFD7F2418369F00AE9D17 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,6 +297,22 @@
 				F06408122413DE5B00CF53CF /* Info.plist */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		F0AEFD8324183BC200AE9D17 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0AEFD8424183BD100AE9D17 /* UIView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F0AEFD8424183BD100AE9D17 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F0AEFD8524183BF800AE9D17 /* UIView+LoadViewWithXib.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +398,7 @@
 			files = (
 				F06408112413DE5B00CF53CF /* LaunchScreen.storyboard in Resources */,
 				F064080E2413DE5B00CF53CF /* Assets.xcassets in Resources */,
+				F0AEFD822418372E00AE9D17 /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +420,9 @@
 				F064082A2413E41700CF53CF /* SessionProvider.swift in Sources */,
 				F051407724142D3E00ED57A9 /* URLSession+URLSessionProtocol.swift in Sources */,
 				F06408312413E7D400CF53CF /* NetworkError.swift in Sources */,
+				F0AEFD802418369F00AE9D17 /* HomeView.swift in Sources */,
 				F06408092413DE5900CF53CF /* HomeViewController.swift in Sources */,
+				F0AEFD8624183BF800AE9D17 /* UIView+LoadViewWithXib.swift in Sources */,
 				F064082C2413E48E00CF53CF /* UserService.swift in Sources */,
 				F051407324142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift in Sources */,
 				F051407524142D0400ED57A9 /* URLSessionProtocol.swift in Sources */,
