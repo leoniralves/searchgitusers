@@ -7,12 +7,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="SearchGitUsersMVC" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="SearchGitUsersMVC" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="vOe-4Y-NLm" id="4WF-37-wWR"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iRP-s2-GA3">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vOe-4Y-NLm">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="riH-Be-jay" firstAttribute="trailing" secondItem="vOe-4Y-NLm" secondAttribute="trailing" id="7jz-6U-Zub"/>
+                <constraint firstItem="vOe-4Y-NLm" firstAttribute="leading" secondItem="riH-Be-jay" secondAttribute="leading" id="hi8-Eo-7zt"/>
+                <constraint firstItem="vOe-4Y-NLm" firstAttribute="top" secondItem="riH-Be-jay" secondAttribute="top" id="zTc-SM-u2X"/>
+                <constraint firstItem="riH-Be-jay" firstAttribute="bottom" secondItem="vOe-4Y-NLm" secondAttribute="bottom" id="zV9-um-TU7"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="riH-Be-jay"/>
             <point key="canvasLocation" x="132" y="153"/>
         </view>

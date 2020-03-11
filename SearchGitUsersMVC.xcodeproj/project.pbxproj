@@ -30,6 +30,11 @@
 		F0AEFD802418369F00AE9D17 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD7F2418369F00AE9D17 /* HomeView.swift */; };
 		F0AEFD822418372E00AE9D17 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AEFD812418372E00AE9D17 /* HomeView.xib */; };
 		F0AEFD8624183BF800AE9D17 /* UIView+LoadViewWithXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8524183BF800AE9D17 /* UIView+LoadViewWithXib.swift */; };
+		F0AEFD882419135200AE9D17 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD872419135200AE9D17 /* HomeViewCell.swift */; };
+		F0AEFD8A2419138F00AE9D17 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AEFD892419138F00AE9D17 /* HomeViewCell.xib */; };
+		F0AEFD8D2419288500AE9D17 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8C2419288500AE9D17 /* ReusableView.swift */; };
+		F0AEFD8F241928AB00AE9D17 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8E241928AB00AE9D17 /* NibLoadableView.swift */; };
+		F0AEFD922419307700AE9D17 /* UITableView+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD912419307700AE9D17 /* UITableView+DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		F0AEFD7F2418369F00AE9D17 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F0AEFD812418372E00AE9D17 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		F0AEFD8524183BF800AE9D17 /* UIView+LoadViewWithXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadViewWithXib.swift"; sourceTree = "<group>"; };
+		F0AEFD872419135200AE9D17 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		F0AEFD892419138F00AE9D17 /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		F0AEFD8C2419288500AE9D17 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		F0AEFD8E241928AB00AE9D17 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		F0AEFD912419307700AE9D17 /* UITableView+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +270,7 @@
 			children = (
 				F0AEFD4D241819E400AE9D17 /* Home */,
 				F0AEFD8324183BC200AE9D17 /* Extensions */,
+				F0AEFD8B2419284600AE9D17 /* Protocols */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -279,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				F0AEFD812418372E00AE9D17 /* HomeView.xib */,
+				F0AEFD892419138F00AE9D17 /* HomeViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -287,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				F0AEFD7F2418369F00AE9D17 /* HomeView.swift */,
+				F0AEFD872419135200AE9D17 /* HomeViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +315,7 @@
 		F0AEFD8324183BC200AE9D17 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F0AEFD902419305200AE9D17 /* UITableView */,
 				F0AEFD8424183BD100AE9D17 /* UIView */,
 			);
 			path = Extensions;
@@ -313,6 +327,23 @@
 				F0AEFD8524183BF800AE9D17 /* UIView+LoadViewWithXib.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		F0AEFD8B2419284600AE9D17 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F0AEFD8C2419288500AE9D17 /* ReusableView.swift */,
+				F0AEFD8E241928AB00AE9D17 /* NibLoadableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F0AEFD902419305200AE9D17 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				F0AEFD912419307700AE9D17 /* UITableView+DataSource.swift */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F06408112413DE5B00CF53CF /* LaunchScreen.storyboard in Resources */,
+				F0AEFD8A2419138F00AE9D17 /* HomeViewCell.xib in Resources */,
 				F064080E2413DE5B00CF53CF /* Assets.xcassets in Resources */,
 				F0AEFD822418372E00AE9D17 /* HomeView.xib in Resources */,
 			);
@@ -426,11 +458,15 @@
 				F064082C2413E48E00CF53CF /* UserService.swift in Sources */,
 				F051407324142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift in Sources */,
 				F051407524142D0400ED57A9 /* URLSessionProtocol.swift in Sources */,
+				F0AEFD8D2419288500AE9D17 /* ReusableView.swift in Sources */,
+				F0AEFD922419307700AE9D17 /* UITableView+DataSource.swift in Sources */,
 				F06408332413E88400CF53CF /* User.swift in Sources */,
 				F06408352413EB8700CF53CF /* HTTPMethod.swift in Sources */,
 				F051407924142D5A00ED57A9 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
 				F0AEFD422416DFE100AE9D17 /* Credentials.swift in Sources */,
+				F0AEFD8F241928AB00AE9D17 /* NibLoadableView.swift in Sources */,
 				F064082F2413E62D00CF53CF /* ServiceProtocol.swift in Sources */,
+				F0AEFD882419135200AE9D17 /* HomeViewCell.swift in Sources */,
 				F06408052413DE5900CF53CF /* AppDelegate.swift in Sources */,
 				F06408072413DE5900CF53CF /* SceneDelegate.swift in Sources */,
 			);

@@ -10,9 +10,7 @@ import UIKit
 
 extension UIView {
     func loadView() {
-        let nib = UINib(nibName: "\(Self.self)",
-            bundle: Bundle(for: Self.self))
-        guard let view = nib.instantiate(withOwner: self,
+        guard let view = Self.nib.instantiate(withOwner: self,
                                          options: nil)[0] as? UIView else {
             return
         }
