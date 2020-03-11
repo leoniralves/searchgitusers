@@ -22,11 +22,24 @@ class SessionProvider {
             return
         }
         
-        var urlRequest = URLRequest(url: url)
+        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+            completion(.failure(.badURL))
+            return
+        }
+        
+        components.queryItems = service.parameters.map({ URLQueryItem(name: $0.key, value: $0.value) })
+        
+        guard let componentURL = components.url else {
+            completion(.failure(.badURL))
+            return
+        }
+        
+        var urlRequest = URLRequest(url: componentURL)
         urlRequest.addValue(auth,
                             forHTTPHeaderField: "Authorization")
         
-        let session = self.session.dataTask(request: urlRequest) { (data, response, error) in
+        let session = self.session.dataTask(request: urlRequest) { /*[weak self]*/ (data, response, error) in
+            self.debugResponse(request: urlRequest, data: data)
             if let error = error {
                 completion(.failure(.connectionFailure(error)))
             } else {
@@ -51,4 +64,27 @@ class SessionProvider {
         let auth = "Bearer \(Credentials.accessToken)"
         return auth
     }()
+    
+    private func debugResponse(request: URLRequest, data: Data?) {
+        print("==== REQUEST ====")
+        print("\nURL: \(request.url?.absoluteString ?? "")")
+        
+        if let requestHeader = request.allHTTPHeaderFields {
+            if let data = try? JSONSerialization.data(withJSONObject: requestHeader, options: .prettyPrinted) {
+                print("\nHEADER: \(String(data: data, encoding: .utf8) ?? "")")
+            }
+        }
+        
+        print("\nMETHOD: \(request.httpMethod ?? "")")
+        
+        print("\n==== RESPONSE ====")
+        if let data = data {
+            if let jsonObject = try? JSONSerialization.jsonObject(with: data) {
+                if let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted) {
+                    print(String(data: jsonData, encoding: .utf8) ?? "")
+                }
+            }
+        }
+        print("\n================\n")
+    }
 }

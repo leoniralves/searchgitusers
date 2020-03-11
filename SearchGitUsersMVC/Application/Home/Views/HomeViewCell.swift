@@ -12,7 +12,5 @@ class HomeViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        print("opa")
     }
 }

@@ -19,7 +19,7 @@ enum UserService: ServiceProtocol {
     var path: String {
         switch self {
         case .query:
-            return "users"
+            return "search/users"
         }
     }
     

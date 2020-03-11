@@ -10,5 +10,5 @@ import Foundation
 
 enum Credentials {
     /// https://github.com/settings/tokens
-    static var accessToken = "YOUR_ACCESS_TOKEN"
+    static var accessToken = "20082bb8935ddfafc7be5e8a693fdb0e97b67acf"
 }
