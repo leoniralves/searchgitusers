@@ -18,15 +18,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchUser(with: "leoniralves", page: 1)
+        searchUser(with: "leonir", page: 1)
     }
 
     private func searchUser(with name: String, page: Int) {
         let sessionProvider = SessionProvider()
-        sessionProvider.request(type: Users.self, service: UserService.query(name: name, page: page)) { (result) in
+        sessionProvider.request(type: Users.self, service: UserService.query(name: name, page: page)) { [weak self] (result) in
             switch result {
             case .success(let users):
-                print(users)
+                self?.homeView.configure(users: users)
             case .failure(let error):
                 print(error)
             }

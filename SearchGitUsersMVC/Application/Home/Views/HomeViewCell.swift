@@ -10,7 +10,13 @@ import UIKit
 
 class HomeViewCell: UITableViewCell {
     
+    @IBOutlet weak var lbName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func configure(user: User) {
+        lbName.text = user.login
     }
 }

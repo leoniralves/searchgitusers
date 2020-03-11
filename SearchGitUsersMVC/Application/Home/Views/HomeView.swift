@@ -12,6 +12,8 @@ class HomeView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private var users: [User] = []
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadView()
@@ -20,6 +22,13 @@ class HomeView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(users: Users) {
+        self.users = users.items
+        DispatchQueue.main.sync {
+            tableView.reloadData()
+        }
     }
     
     private func setup() {
@@ -36,11 +45,12 @@ class HomeView: UIView {
 
 extension HomeView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: HomeViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
+        cell.configure(user: users[indexPath.row])
         return cell
     }
 }

@@ -14,8 +14,26 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tA2-eh-baw" id="Clc-DD-faR">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-19-Zae">
+                        <rect key="frame" x="16" y="16" width="382" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="9SK-19-Zae" firstAttribute="top" secondItem="Clc-DD-faR" secondAttribute="top" constant="16" id="69V-v5-fFb"/>
+                    <constraint firstAttribute="bottom" secondItem="9SK-19-Zae" secondAttribute="bottom" constant="16" id="NZ1-HC-sAk"/>
+                    <constraint firstAttribute="trailing" secondItem="9SK-19-Zae" secondAttribute="trailing" constant="16" id="fZl-v7-p5q"/>
+                    <constraint firstItem="9SK-19-Zae" firstAttribute="leading" secondItem="Clc-DD-faR" secondAttribute="leading" constant="16" id="kDq-tO-iv1"/>
+                    <constraint firstItem="9SK-19-Zae" firstAttribute="centerY" secondItem="Clc-DD-faR" secondAttribute="centerY" id="rvv-nn-geq"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="lbName" destination="9SK-19-Zae" id="kJp-Eb-7Yd"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
         </tableViewCell>
     </objects>
