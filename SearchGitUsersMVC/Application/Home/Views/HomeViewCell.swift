@@ -11,6 +11,7 @@ import UIKit
 class HomeViewCell: UITableViewCell {
     
     @IBOutlet weak var lbName: UILabel!
+    @IBOutlet weak var ivImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,5 +19,9 @@ class HomeViewCell: UITableViewCell {
     
     func configure(user: User) {
         lbName.text = user.login
+        let placeholder = UIView(frame: ivImage.frame)
+        placeholder.backgroundColor = .lightGray
+        ivImage.load(url: user.avatarURL, placeholder: placeholder.asImage())
+        ivImage.layer.cornerRadius = ivImage.frame.width/2
     }
 }

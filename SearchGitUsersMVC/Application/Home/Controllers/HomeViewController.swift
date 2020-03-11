@@ -18,7 +18,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchUser(with: "leonir", page: 1)
+        title = "Home"
+        homeView.delegate = self
     }
 
     private func searchUser(with name: String, page: Int) {
@@ -34,3 +35,8 @@ class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController: HomeViewDelegate {
+    func homeView(_ homeView: HomeView, searchTextDidChange: String) {
+        searchUser(with: searchTextDidChange, page: 0)
+    }
+}

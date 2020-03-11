@@ -8,9 +8,16 @@
 
 import UIKit
 
+protocol HomeViewDelegate: class {
+    func homeView(_ homeView: HomeView, searchTextDidChange: String)
+}
+
 class HomeView: UIView {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    
+    weak var delegate: HomeViewDelegate?
     
     private var users: [User] = []
     
@@ -32,13 +39,17 @@ class HomeView: UIView {
     }
     
     private func setup() {
-        // Delegate & Data Source
-        tableView.dataSource = self
+        /// SearchBar Delegate
+        searchBar.delegate = self
         
-        // Register Cell
+        /// TableView Delegate & Data Source
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        /// Register Cell
         tableView.register(HomeViewCell.self)
         
-        // Configure Layout
+        /// Configure Layout
         tableView.tableFooterView = UIView()
     }
 }
@@ -52,5 +63,28 @@ extension HomeView: UITableViewDataSource {
         let cell: HomeViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
         cell.configure(user: users[indexPath.row])
         return cell
+    }
+}
+
+extension HomeView: UITableViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        endEditing(true)
+    }
+}
+
+extension HomeView: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else {
+            return
+        }
+        delegate?.homeView(self, searchTextDidChange: searchText)
+        endEditing(!searchText.isEmpty)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            print("clear")
+        }
     }
 }

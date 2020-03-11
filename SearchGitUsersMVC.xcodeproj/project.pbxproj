@@ -29,12 +29,13 @@
 		F0AEFD422416DFE100AE9D17 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD412416DFE100AE9D17 /* Credentials.swift */; };
 		F0AEFD802418369F00AE9D17 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD7F2418369F00AE9D17 /* HomeView.swift */; };
 		F0AEFD822418372E00AE9D17 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AEFD812418372E00AE9D17 /* HomeView.xib */; };
-		F0AEFD8624183BF800AE9D17 /* UIView+LoadViewWithXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8524183BF800AE9D17 /* UIView+LoadViewWithXib.swift */; };
+		F0AEFD8624183BF800AE9D17 /* UIView+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8524183BF800AE9D17 /* UIView+Commons.swift */; };
 		F0AEFD882419135200AE9D17 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD872419135200AE9D17 /* HomeViewCell.swift */; };
 		F0AEFD8A2419138F00AE9D17 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AEFD892419138F00AE9D17 /* HomeViewCell.xib */; };
 		F0AEFD8D2419288500AE9D17 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8C2419288500AE9D17 /* ReusableView.swift */; };
 		F0AEFD8F241928AB00AE9D17 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8E241928AB00AE9D17 /* NibLoadableView.swift */; };
-		F0AEFD922419307700AE9D17 /* UITableView+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD912419307700AE9D17 /* UITableView+DataSource.swift */; };
+		F0AEFD922419307700AE9D17 /* UITableView+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD912419307700AE9D17 /* UITableView+Commons.swift */; };
+		F0AEFD95241986B800AE9D17 /* UIImageView+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD94241986B800AE9D17 /* UIImageView+Commons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,12 +75,13 @@
 		F0AEFD412416DFE100AE9D17 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		F0AEFD7F2418369F00AE9D17 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F0AEFD812418372E00AE9D17 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
-		F0AEFD8524183BF800AE9D17 /* UIView+LoadViewWithXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadViewWithXib.swift"; sourceTree = "<group>"; };
+		F0AEFD8524183BF800AE9D17 /* UIView+Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Commons.swift"; sourceTree = "<group>"; };
 		F0AEFD872419135200AE9D17 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		F0AEFD892419138F00AE9D17 /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
 		F0AEFD8C2419288500AE9D17 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F0AEFD8E241928AB00AE9D17 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
-		F0AEFD912419307700AE9D17 /* UITableView+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DataSource.swift"; sourceTree = "<group>"; };
+		F0AEFD912419307700AE9D17 /* UITableView+Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Commons.swift"; sourceTree = "<group>"; };
+		F0AEFD94241986B800AE9D17 /* UIImageView+Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Commons.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +317,7 @@
 		F0AEFD8324183BC200AE9D17 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F0AEFD93241986A700AE9D17 /* UIImageView */,
 				F0AEFD902419305200AE9D17 /* UITableView */,
 				F0AEFD8424183BD100AE9D17 /* UIView */,
 			);
@@ -324,7 +327,7 @@
 		F0AEFD8424183BD100AE9D17 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				F0AEFD8524183BF800AE9D17 /* UIView+LoadViewWithXib.swift */,
+				F0AEFD8524183BF800AE9D17 /* UIView+Commons.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -341,9 +344,17 @@
 		F0AEFD902419305200AE9D17 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				F0AEFD912419307700AE9D17 /* UITableView+DataSource.swift */,
+				F0AEFD912419307700AE9D17 /* UITableView+Commons.swift */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		F0AEFD93241986A700AE9D17 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				F0AEFD94241986B800AE9D17 /* UIImageView+Commons.swift */,
+			);
+			path = UIImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,15 +462,16 @@
 			files = (
 				F064082A2413E41700CF53CF /* SessionProvider.swift in Sources */,
 				F051407724142D3E00ED57A9 /* URLSession+URLSessionProtocol.swift in Sources */,
+				F0AEFD95241986B800AE9D17 /* UIImageView+Commons.swift in Sources */,
 				F06408312413E7D400CF53CF /* NetworkError.swift in Sources */,
 				F0AEFD802418369F00AE9D17 /* HomeView.swift in Sources */,
 				F06408092413DE5900CF53CF /* HomeViewController.swift in Sources */,
-				F0AEFD8624183BF800AE9D17 /* UIView+LoadViewWithXib.swift in Sources */,
+				F0AEFD8624183BF800AE9D17 /* UIView+Commons.swift in Sources */,
 				F064082C2413E48E00CF53CF /* UserService.swift in Sources */,
 				F051407324142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift in Sources */,
 				F051407524142D0400ED57A9 /* URLSessionProtocol.swift in Sources */,
 				F0AEFD8D2419288500AE9D17 /* ReusableView.swift in Sources */,
-				F0AEFD922419307700AE9D17 /* UITableView+DataSource.swift in Sources */,
+				F0AEFD922419307700AE9D17 /* UITableView+Commons.swift in Sources */,
 				F06408332413E88400CF53CF /* User.swift in Sources */,
 				F06408352413EB8700CF53CF /* HTTPMethod.swift in Sources */,
 				F051407924142D5A00ED57A9 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
