@@ -1,7 +1,8 @@
 {
     "items": [
         {
-            "login": "leoniralves"
+            "login": "leoniralves",
+            "avatar_url": "http://avatar.mock.com"
         }
     ]
 }

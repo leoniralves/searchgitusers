@@ -9,9 +9,9 @@
 import XCTest
 @testable import SearchGitUsersMVC
 
-enum MockUserService: ServiceProtocol {
+enum MockService: ServiceProtocol {
     
-    case query(name: String, page: Int)
+    case mock
     
     var baseURL: URL? {
         return URL(string: "http://opa.com")
@@ -47,10 +47,7 @@ class SessionProviderTests: XCTestCase {
 
     func testRequestWithURL() {
         let expectation = XCTestExpectation(description: "Request User data")
-        sessionProvider.request(type: User.self,
-                                service: MockUserService.query(name: "leonir",
-                                                           page: 1)) { [weak self] result in
-                                                            
+        sessionProvider.request(type: User.self, service: MockService.mock) { [weak self] result in
             XCTAssertEqual(self?.mockURLSession.lastURL, URL(string: "http://opa.com/users"))
             expectation.fulfill()
         }
@@ -65,8 +62,7 @@ class SessionProviderTests: XCTestCase {
         
         let expectation = XCTestExpectation(description: "Request User data")
         sessionProvider.request(type: User.self,
-                                service: MockUserService.query(name: "leonir",
-                                                           page: 1)) { _ in
+                                service: MockService.mock) { _ in
             expectation.fulfill()
         }
         XCTAssertTrue(dataTask.mockResumeCalled)
@@ -85,7 +81,7 @@ class SessionProviderTests: XCTestCase {
         mockURLSession.data = data
         
         let expectation = XCTestExpectation(description: "Request User data")
-        sessionProvider.request(type: Users.self, service: MockUserService.query(name: "leonir", page: 1)) { result in
+        sessionProvider.request(type: Users.self, service: MockService.mock) { result in
             switch result {
             case .success(let users):
                 XCTAssertEqual(users.items[0].login, "leoniralves")

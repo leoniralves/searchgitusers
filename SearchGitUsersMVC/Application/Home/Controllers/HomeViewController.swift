@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     private let homeView = HomeView()
+    private let sessionProvider = SessionProvider()
     
     override func loadView() {
         view = homeView
@@ -23,7 +24,6 @@ class HomeViewController: UIViewController {
     }
 
     private func searchUser(with name: String, page: Int) {
-        let sessionProvider = SessionProvider()
         sessionProvider.request(type: Users.self, service: UserService.query(name: name, page: page)) { [weak self] (result) in
             switch result {
             case .success(let users):
