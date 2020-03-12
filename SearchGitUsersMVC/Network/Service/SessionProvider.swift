@@ -27,7 +27,7 @@ class SessionProvider {
             return
         }
         
-//        components.queryItems = service.parameters.map({ URLQueryItem(name: $0.key, value: $0.value) })
+        components.queryItems = service.parameters.map({ URLQueryItem(name: $0.key, value: $0.value) })
         
         guard let componentURL = components.url else {
             completion(.failure(.badURL))
