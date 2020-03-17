@@ -10,7 +10,8 @@ import Foundation
 
 enum UserService: ServiceProtocol {
     
-    case query(name: String, page: Int)
+    case search(name: String, page: Int)
+    case profile(login: String)
     
     var baseURL: URL? {
         return URL(string: "https://api.github.com")
@@ -18,8 +19,10 @@ enum UserService: ServiceProtocol {
     
     var path: String {
         switch self {
-        case .query:
+        case .search:
             return "search/users"
+        case .profile(let login):
+            return "users/\(login)"
         }
     }
     
@@ -29,9 +32,11 @@ enum UserService: ServiceProtocol {
     
     var parameters: [String : String] {
         switch self {
-        case .query(let name, let page):
+        case .search(let name, let page):
             return ["q": name,
                     "page": String(page)]
+        default:
+            return [:]
         }
     }
 }

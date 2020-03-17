@@ -81,7 +81,8 @@ class SessionProviderTests: XCTestCase {
         mockURLSession.data = data
         
         let expectation = XCTestExpectation(description: "Request User data")
-        sessionProvider.request(type: Users.self, service: MockService.mock) { result in
+        sessionProvider.request(type: Users.self,
+                                service: MockService.mock) { result in
             switch result {
             case .success(let users):
                 XCTAssertEqual(users.items[0].login, "leoniralves")

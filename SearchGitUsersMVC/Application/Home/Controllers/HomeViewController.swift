@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
     }
 
     private func searchUser(with name: String, page: Int) {
-        sessionProvider.request(type: Users.self, service: UserService.query(name: name, page: page)) { [weak self] (result) in
+        sessionProvider.request(type: Users.self, service: UserService.search(name: name, page: page)) { [weak self] (result) in
             switch result {
             case .success(let users):
                 self?.homeView.configure(users: users)
@@ -36,6 +36,10 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeViewDelegate {
+    func homeView(_ homeView: HomeView, didSelectedUser: User) {
+        //..
+    }
+    
     func homeView(_ homeView: HomeView, searchTextDidChange: String) {
         searchUser(with: searchTextDidChange, page: 0)
     }

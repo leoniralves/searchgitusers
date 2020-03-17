@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomeViewDelegate: class {
     func homeView(_ homeView: HomeView, searchTextDidChange: String)
+    func homeView(_ homeView: HomeView, didSelectedUser: User)
 }
 
 class HomeView: UIView {
@@ -67,6 +68,11 @@ extension HomeView: UITableViewDataSource {
 }
 
 extension HomeView: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.homeView(self, didSelectedUser: users[indexPath.row])
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         endEditing(true)
     }
