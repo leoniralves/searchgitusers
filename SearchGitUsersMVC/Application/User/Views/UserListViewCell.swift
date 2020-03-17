@@ -1,5 +1,5 @@
 //
-//  HomeViewCell.swift
+//  UserListViewCell.swift
 //  SearchGitUsersMVC
 //
 //  Created by Leonir Alves Deolindo on 11/03/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewCell: UITableViewCell {
+class UserListViewCell: UITableViewCell {
     
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var ivImage: UIImageView!

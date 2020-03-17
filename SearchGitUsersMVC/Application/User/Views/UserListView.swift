@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  UserListView.swift
 //  SearchGitUsersMVC
 //
 //  Created by Leonir Alves Deolindo on 10/03/20.
@@ -8,17 +8,17 @@
 
 import UIKit
 
-protocol HomeViewDelegate: class {
-    func homeView(_ homeView: HomeView, searchTextDidChange: String)
-    func homeView(_ homeView: HomeView, didSelectedUser: User)
+protocol UserListViewDelegate: class {
+    func userListView(_ userListView: UserListView, searchTextDidChange: String)
+    func homeView(_ userListView: UserListView, didSelectedUser: User)
 }
 
-class HomeView: UIView {
+class UserListView: UIView {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    weak var delegate: HomeViewDelegate?
+    weak var delegate: UserListViewDelegate?
     
     private var users: [User] = []
     
@@ -48,26 +48,26 @@ class HomeView: UIView {
         tableView.delegate = self
         
         /// Register Cell
-        tableView.register(HomeViewCell.self)
+        tableView.register(UserListViewCell.self)
         
         /// Configure Layout
         tableView.tableFooterView = UIView()
     }
 }
 
-extension HomeView: UITableViewDataSource {
+extension UserListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: HomeViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
+        let cell: UserListViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
         cell.configure(user: users[indexPath.row])
         return cell
     }
 }
 
-extension HomeView: UITableViewDelegate {
+extension UserListView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.homeView(self, didSelectedUser: users[indexPath.row])
@@ -78,13 +78,13 @@ extension HomeView: UITableViewDelegate {
     }
 }
 
-extension HomeView: UISearchBarDelegate {
+extension UserListView: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text else {
             return
         }
-        delegate?.homeView(self, searchTextDidChange: searchText)
+        delegate?.userListView(self, searchTextDidChange: searchText)
         endEditing(!searchText.isEmpty)
     }
     

@@ -13,7 +13,7 @@
 		F051407924142D5A00ED57A9 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051407824142D5A00ED57A9 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift */; };
 		F06408052413DE5900CF53CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408042413DE5900CF53CF /* AppDelegate.swift */; };
 		F06408072413DE5900CF53CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408062413DE5900CF53CF /* SceneDelegate.swift */; };
-		F06408092413DE5900CF53CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408082413DE5900CF53CF /* HomeViewController.swift */; };
+		F06408092413DE5900CF53CF /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408082413DE5900CF53CF /* UserListViewController.swift */; };
 		F064080E2413DE5B00CF53CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F064080D2413DE5B00CF53CF /* Assets.xcassets */; };
 		F06408112413DE5B00CF53CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F064080F2413DE5B00CF53CF /* LaunchScreen.storyboard */; };
 		F064081C2413DE5B00CF53CF /* SessionProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064081B2413DE5B00CF53CF /* SessionProviderTests.swift */; };
@@ -27,11 +27,11 @@
 		F074DEB62416907000B22103 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F074DEB52416907000B22103 /* MockURLSessionDataTask.swift */; };
 		F074DEB82416908400B22103 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F074DEB72416908400B22103 /* MockURLSession.swift */; };
 		F0AEFD422416DFE100AE9D17 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD412416DFE100AE9D17 /* Credentials.swift */; };
-		F0AEFD802418369F00AE9D17 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD7F2418369F00AE9D17 /* HomeView.swift */; };
-		F0AEFD822418372E00AE9D17 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AEFD812418372E00AE9D17 /* HomeView.xib */; };
+		F0AEFD802418369F00AE9D17 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD7F2418369F00AE9D17 /* UserListView.swift */; };
+		F0AEFD822418372E00AE9D17 /* UserListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AEFD812418372E00AE9D17 /* UserListView.xib */; };
 		F0AEFD8624183BF800AE9D17 /* UIView+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8524183BF800AE9D17 /* UIView+Commons.swift */; };
-		F0AEFD882419135200AE9D17 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD872419135200AE9D17 /* HomeViewCell.swift */; };
-		F0AEFD8A2419138F00AE9D17 /* HomeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AEFD892419138F00AE9D17 /* HomeViewCell.xib */; };
+		F0AEFD882419135200AE9D17 /* UserListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD872419135200AE9D17 /* UserListViewCell.swift */; };
+		F0AEFD8A2419138F00AE9D17 /* UserListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AEFD892419138F00AE9D17 /* UserListViewCell.xib */; };
 		F0AEFD8D2419288500AE9D17 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8C2419288500AE9D17 /* ReusableView.swift */; };
 		F0AEFD8F241928AB00AE9D17 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8E241928AB00AE9D17 /* NibLoadableView.swift */; };
 		F0AEFD922419307700AE9D17 /* UITableView+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD912419307700AE9D17 /* UITableView+Commons.swift */; };
@@ -56,7 +56,7 @@
 		F06408012413DE5900CF53CF /* SearchGitUsersMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchGitUsersMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06408042413DE5900CF53CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F06408062413DE5900CF53CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F06408082413DE5900CF53CF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F06408082413DE5900CF53CF /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		F064080D2413DE5B00CF53CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F06408102413DE5B00CF53CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F06408122413DE5B00CF53CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,11 +73,11 @@
 		F074DEB52416907000B22103 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		F074DEB72416908400B22103 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		F0AEFD412416DFE100AE9D17 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		F0AEFD7F2418369F00AE9D17 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		F0AEFD812418372E00AE9D17 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		F0AEFD7F2418369F00AE9D17 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		F0AEFD812418372E00AE9D17 /* UserListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListView.xib; sourceTree = "<group>"; };
 		F0AEFD8524183BF800AE9D17 /* UIView+Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Commons.swift"; sourceTree = "<group>"; };
-		F0AEFD872419135200AE9D17 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
-		F0AEFD892419138F00AE9D17 /* HomeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewCell.xib; sourceTree = "<group>"; };
+		F0AEFD872419135200AE9D17 /* UserListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewCell.swift; sourceTree = "<group>"; };
+		F0AEFD892419138F00AE9D17 /* UserListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListViewCell.xib; sourceTree = "<group>"; };
 		F0AEFD8C2419288500AE9D17 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		F0AEFD8E241928AB00AE9D17 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		F0AEFD912419307700AE9D17 /* UITableView+Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Commons.swift"; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 		F0AEFD492416EF1400AE9D17 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F06408082413DE5900CF53CF /* HomeViewController.swift */,
+				F06408082413DE5900CF53CF /* UserListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -270,14 +270,14 @@
 		F0AEFD4C241819C100AE9D17 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				F0AEFD4D241819E400AE9D17 /* Home */,
+				F0AEFD4D241819E400AE9D17 /* User */,
 				F0AEFD8324183BC200AE9D17 /* Extensions */,
 				F0AEFD8B2419284600AE9D17 /* Protocols */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		F0AEFD4D241819E400AE9D17 /* Home */ = {
+		F0AEFD4D241819E400AE9D17 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				F0AEFD4F24181A2700AE9D17 /* Views */,
@@ -285,14 +285,14 @@
 				F0AEFD4E24181A0900AE9D17 /* UI */,
 				F0AEFD492416EF1400AE9D17 /* Controllers */,
 			);
-			path = Home;
+			path = User;
 			sourceTree = "<group>";
 		};
 		F0AEFD4E24181A0900AE9D17 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				F0AEFD812418372E00AE9D17 /* HomeView.xib */,
-				F0AEFD892419138F00AE9D17 /* HomeViewCell.xib */,
+				F0AEFD812418372E00AE9D17 /* UserListView.xib */,
+				F0AEFD892419138F00AE9D17 /* UserListViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -300,8 +300,8 @@
 		F0AEFD4F24181A2700AE9D17 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F0AEFD7F2418369F00AE9D17 /* HomeView.swift */,
-				F0AEFD872419135200AE9D17 /* HomeViewCell.swift */,
+				F0AEFD7F2418369F00AE9D17 /* UserListView.swift */,
+				F0AEFD872419135200AE9D17 /* UserListViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -439,9 +439,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F06408112413DE5B00CF53CF /* LaunchScreen.storyboard in Resources */,
-				F0AEFD8A2419138F00AE9D17 /* HomeViewCell.xib in Resources */,
+				F0AEFD8A2419138F00AE9D17 /* UserListViewCell.xib in Resources */,
 				F064080E2413DE5B00CF53CF /* Assets.xcassets in Resources */,
-				F0AEFD822418372E00AE9D17 /* HomeView.xib in Resources */,
+				F0AEFD822418372E00AE9D17 /* UserListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,8 +464,8 @@
 				F051407724142D3E00ED57A9 /* URLSession+URLSessionProtocol.swift in Sources */,
 				F0AEFD95241986B800AE9D17 /* UIImageView+Commons.swift in Sources */,
 				F06408312413E7D400CF53CF /* NetworkError.swift in Sources */,
-				F0AEFD802418369F00AE9D17 /* HomeView.swift in Sources */,
-				F06408092413DE5900CF53CF /* HomeViewController.swift in Sources */,
+				F0AEFD802418369F00AE9D17 /* UserListView.swift in Sources */,
+				F06408092413DE5900CF53CF /* UserListViewController.swift in Sources */,
 				F0AEFD8624183BF800AE9D17 /* UIView+Commons.swift in Sources */,
 				F064082C2413E48E00CF53CF /* UserService.swift in Sources */,
 				F051407324142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift in Sources */,
@@ -478,7 +478,7 @@
 				F0AEFD422416DFE100AE9D17 /* Credentials.swift in Sources */,
 				F0AEFD8F241928AB00AE9D17 /* NibLoadableView.swift in Sources */,
 				F064082F2413E62D00CF53CF /* ServiceProtocol.swift in Sources */,
-				F0AEFD882419135200AE9D17 /* HomeViewCell.swift in Sources */,
+				F0AEFD882419135200AE9D17 /* UserListViewCell.swift in Sources */,
 				F06408052413DE5900CF53CF /* AppDelegate.swift in Sources */,
 				F06408072413DE5900CF53CF /* SceneDelegate.swift in Sources */,
 			);
