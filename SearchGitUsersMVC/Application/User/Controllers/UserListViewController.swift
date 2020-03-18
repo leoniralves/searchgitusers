@@ -38,8 +38,8 @@ class UserListViewController: UIViewController {
 }
 
 extension UserListViewController: UserListViewDelegate {
-    func homeView(_ homeView: UserListView, didSelectedUser: User) {
-        //..
+    func homeView(_ homeView: UserListView, didSelected user: User) {
+        self.show(UserDetailsViewController(user: user), sender: nil)
     }
     
     func userListView(_ homeView: UserListView, searchTextDidChange: String) {

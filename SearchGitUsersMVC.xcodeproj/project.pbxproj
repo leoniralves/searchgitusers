@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0406A81242253EF00897C0A /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0406A80242253EF00897C0A /* UserDetailsViewController.swift */; };
+		F0406A8324226A6700897C0A /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0406A8224226A6700897C0A /* UserDetailsView.swift */; };
+		F0406A8524226AB100897C0A /* UserDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0406A8424226AB100897C0A /* UserDetailsView.xib */; };
+		F0406A8724226D5000897C0A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0406A8624226D5000897C0A /* Users.swift */; };
 		F051407324142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051407224142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift */; };
 		F051407524142D0400ED57A9 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051407424142D0400ED57A9 /* URLSessionProtocol.swift */; };
 		F051407724142D3E00ED57A9 /* URLSession+URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F051407624142D3E00ED57A9 /* URLSession+URLSessionProtocol.swift */; };
@@ -49,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0406A80242253EF00897C0A /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		F0406A8224226A6700897C0A /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
+		F0406A8424226AB100897C0A /* UserDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailsView.xib; sourceTree = "<group>"; };
+		F0406A8624226D5000897C0A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		F051407224142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		F051407424142D0400ED57A9 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		F051407624142D3E00ED57A9 /* URLSession+URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+URLSessionProtocol.swift"; sourceTree = "<group>"; };
@@ -177,6 +185,7 @@
 			children = (
 				F064082B2413E48E00CF53CF /* UserService.swift */,
 				F06408322413E88400CF53CF /* User.swift */,
+				F0406A8624226D5000897C0A /* Users.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -255,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				F06408082413DE5900CF53CF /* UserListViewController.swift */,
+				F0406A80242253EF00897C0A /* UserDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -293,6 +303,7 @@
 			children = (
 				F0AEFD812418372E00AE9D17 /* UserListView.xib */,
 				F0AEFD892419138F00AE9D17 /* UserListViewCell.xib */,
+				F0406A8424226AB100897C0A /* UserDetailsView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -302,6 +313,7 @@
 			children = (
 				F0AEFD7F2418369F00AE9D17 /* UserListView.swift */,
 				F0AEFD872419135200AE9D17 /* UserListViewCell.swift */,
+				F0406A8224226A6700897C0A /* UserDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,6 +452,7 @@
 			files = (
 				F06408112413DE5B00CF53CF /* LaunchScreen.storyboard in Resources */,
 				F0AEFD8A2419138F00AE9D17 /* UserListViewCell.xib in Resources */,
+				F0406A8524226AB100897C0A /* UserDetailsView.xib in Resources */,
 				F064080E2413DE5B00CF53CF /* Assets.xcassets in Resources */,
 				F0AEFD822418372E00AE9D17 /* UserListView.xib in Resources */,
 			);
@@ -465,15 +478,18 @@
 				F0AEFD95241986B800AE9D17 /* UIImageView+Commons.swift in Sources */,
 				F06408312413E7D400CF53CF /* NetworkError.swift in Sources */,
 				F0AEFD802418369F00AE9D17 /* UserListView.swift in Sources */,
+				F0406A8324226A6700897C0A /* UserDetailsView.swift in Sources */,
 				F06408092413DE5900CF53CF /* UserListViewController.swift in Sources */,
 				F0AEFD8624183BF800AE9D17 /* UIView+Commons.swift in Sources */,
 				F064082C2413E48E00CF53CF /* UserService.swift in Sources */,
+				F0406A81242253EF00897C0A /* UserDetailsViewController.swift in Sources */,
 				F051407324142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift in Sources */,
 				F051407524142D0400ED57A9 /* URLSessionProtocol.swift in Sources */,
 				F0AEFD8D2419288500AE9D17 /* ReusableView.swift in Sources */,
 				F0AEFD922419307700AE9D17 /* UITableView+Commons.swift in Sources */,
 				F06408332413E88400CF53CF /* User.swift in Sources */,
 				F06408352413EB8700CF53CF /* HTTPMethod.swift in Sources */,
+				F0406A8724226D5000897C0A /* Users.swift in Sources */,
 				F051407924142D5A00ED57A9 /* URLSessionDataTask+URLSessionDataTaskProtocol.swift in Sources */,
 				F0AEFD422416DFE100AE9D17 /* Credentials.swift in Sources */,
 				F0AEFD8F241928AB00AE9D17 /* NibLoadableView.swift in Sources */,
