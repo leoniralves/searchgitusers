@@ -15,7 +15,10 @@ struct User: Decodable {
     let following: Int?
     let htmlURL: String?
     let publicRepos: Int?
-//    let createdAt: Date?
+    let location: String?
+    let bio: String?
+    let blog: String?
+    let company: String?
     
     private let avatarURLString: String
     
@@ -30,7 +33,10 @@ struct User: Decodable {
         case following
         case htmlURL = "html_url"
         case publicRepos = "public_repos"
-//        case createdAt = "created_at"
+        case location
+        case bio
+        case blog
+        case company
         case avatarURLString = "avatar_url"
     }
 }

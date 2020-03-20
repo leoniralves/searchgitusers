@@ -37,7 +37,9 @@ class UserDetailsViewController: UIViewController {
         sessionProvider.request(type: User.self, service: UserService.profile(login: user.login)) { (result) in
             switch result {
             case .success(let user):
-                self.userDetailView.configure(user)
+                DispatchQueue.main.async {
+                    self.userDetailView.configure(user)
+                }
             case .failure(let error):
                 print(error)
             }
