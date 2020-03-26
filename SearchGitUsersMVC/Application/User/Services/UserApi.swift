@@ -1,5 +1,5 @@
 //
-//  UserService.swift
+//  UserAPI.swift
 //  SearchGitUsersMVC
 //
 //  Created by Leonir Alves Deolindo on 07/03/20.
@@ -8,11 +8,12 @@
 
 import Foundation
 
-enum UserService: ServiceProtocol {
-    
+enum UserAPI {
     case search(name: String, page: Int)
     case profile(login: String)
-    
+}
+
+extension UserAPI: ServiceTargetProtocol {
     var baseURL: URL? {
         return URL(string: "https://api.github.com")
     }

@@ -12,18 +12,20 @@ class UserDetailsViewController: UIViewController {
     
     private var userDetailView = UserDetailsView()
     private var user: User
+    private let service: UserService
     
-    override func loadView() {
-        view = userDetailView
-    }
-    
-    init(user: User) {
+    init(user: User, service: UserService = UserService()) {
         self.user = user
+        self.service = service
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        view = userDetailView
     }
     
     override func viewDidLoad() {
@@ -33,8 +35,7 @@ class UserDetailsViewController: UIViewController {
     }
     
     private func loadData() {
-        let sessionProvider = SessionProvider()
-        sessionProvider.request(type: User.self, service: UserService.profile(login: user.login)) { (result) in
+        service.profile(userlogin: user.login) { (result) in
             switch result {
             case .success(let user):
                 DispatchQueue.main.async {

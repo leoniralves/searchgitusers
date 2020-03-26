@@ -1,5 +1,5 @@
 //
-//  SessionProvider.swift
+//  ServiceProvider.swift
 //  SearchGitUsersMVC
 //
 //  Created by Leonir Alves Deolindo on 07/03/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SessionProvider {
+class ServiceProvider {
     
     private var session: URLSessionProtocol
     
@@ -16,20 +16,20 @@ class SessionProvider {
         self.session = session
     }
     
-    func request<T: Decodable>(type: T.Type, service: ServiceProtocol, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        guard let url = service.baseURL?.appendingPathComponent(service.path) else {
+    func request<T: Decodable>(target: ServiceTargetProtocol, completion: @escaping (Result<T, NetworkError>) -> Void) {
+        guard let url = target.baseURL?.appendingPathComponent(target.path) else {
             completion(.failure(.badURL))
             return
         }
         
-        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
+        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
             completion(.failure(.badURL))
             return
         }
         
-        components.queryItems = service.parameters.map({ URLQueryItem(name: $0.key, value: $0.value) })
+        urlComponents.queryItems = target.parameters.map({ URLQueryItem(name: $0.key, value: $0.value) })
         
-        guard let componentURL = components.url else {
+        guard let componentURL = urlComponents.url else {
             completion(.failure(.badURL))
             return
         }

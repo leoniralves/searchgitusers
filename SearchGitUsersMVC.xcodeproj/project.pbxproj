@@ -22,7 +22,7 @@
 		F06408112413DE5B00CF53CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F064080F2413DE5B00CF53CF /* LaunchScreen.storyboard */; };
 		F064081C2413DE5B00CF53CF /* SessionProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064081B2413DE5B00CF53CF /* SessionProviderTests.swift */; };
 		F064082A2413E41700CF53CF /* SessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408292413E41700CF53CF /* SessionProvider.swift */; };
-		F064082C2413E48E00CF53CF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064082B2413E48E00CF53CF /* UserService.swift */; };
+		F064082C2413E48E00CF53CF /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064082B2413E48E00CF53CF /* UserApi.swift */; };
 		F064082F2413E62D00CF53CF /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064082E2413E62D00CF53CF /* ServiceProtocol.swift */; };
 		F06408312413E7D400CF53CF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408302413E7D400CF53CF /* NetworkError.swift */; };
 		F06408332413E88400CF53CF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408322413E88400CF53CF /* User.swift */; };
@@ -40,6 +40,7 @@
 		F0AEFD8F241928AB00AE9D17 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD8E241928AB00AE9D17 /* NibLoadableView.swift */; };
 		F0AEFD922419307700AE9D17 /* UITableView+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD912419307700AE9D17 /* UITableView+Commons.swift */; };
 		F0AEFD95241986B800AE9D17 /* UIImageView+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEFD94241986B800AE9D17 /* UIImageView+Commons.swift */; };
+		F0B0B391242D29E9003834F5 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B390242D29E9003834F5 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +73,7 @@
 		F064081B2413DE5B00CF53CF /* SessionProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProviderTests.swift; sourceTree = "<group>"; };
 		F064081D2413DE5B00CF53CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F06408292413E41700CF53CF /* SessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProvider.swift; sourceTree = "<group>"; };
-		F064082B2413E48E00CF53CF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F064082B2413E48E00CF53CF /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		F064082E2413E62D00CF53CF /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		F06408302413E7D400CF53CF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		F06408322413E88400CF53CF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		F0AEFD8E241928AB00AE9D17 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		F0AEFD912419307700AE9D17 /* UITableView+Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Commons.swift"; sourceTree = "<group>"; };
 		F0AEFD94241986B800AE9D17 /* UIImageView+Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Commons.swift"; sourceTree = "<group>"; };
+		F0B0B390242D29E9003834F5 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +185,6 @@
 		F064082D2413E5FB00CF53CF /* User */ = {
 			isa = PBXGroup;
 			children = (
-				F064082B2413E48E00CF53CF /* UserService.swift */,
 				F06408322413E88400CF53CF /* User.swift */,
 				F0406A8624226D5000897C0A /* Users.swift */,
 			);
@@ -290,6 +291,7 @@
 		F0AEFD4D241819E400AE9D17 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				F0B0B38F242D29C9003834F5 /* Services */,
 				F0AEFD4F24181A2700AE9D17 /* Views */,
 				F0AEFD482416EEF200AE9D17 /* Models */,
 				F0AEFD4E24181A0900AE9D17 /* UI */,
@@ -367,6 +369,15 @@
 				F0AEFD94241986B800AE9D17 /* UIImageView+Commons.swift */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		F0B0B38F242D29C9003834F5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F064082B2413E48E00CF53CF /* UserApi.swift */,
+				F0B0B390242D29E9003834F5 /* UserService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F064082A2413E41700CF53CF /* SessionProvider.swift in Sources */,
+				F0B0B391242D29E9003834F5 /* UserService.swift in Sources */,
 				F051407724142D3E00ED57A9 /* URLSession+URLSessionProtocol.swift in Sources */,
 				F0AEFD95241986B800AE9D17 /* UIImageView+Commons.swift in Sources */,
 				F06408312413E7D400CF53CF /* NetworkError.swift in Sources */,
@@ -481,7 +493,7 @@
 				F0406A8324226A6700897C0A /* UserDetailsView.swift in Sources */,
 				F06408092413DE5900CF53CF /* UserListViewController.swift in Sources */,
 				F0AEFD8624183BF800AE9D17 /* UIView+Commons.swift in Sources */,
-				F064082C2413E48E00CF53CF /* UserService.swift in Sources */,
+				F064082C2413E48E00CF53CF /* UserApi.swift in Sources */,
 				F0406A81242253EF00897C0A /* UserDetailsViewController.swift in Sources */,
 				F051407324142CEF00ED57A9 /* URLSessionDataTaskProtocol.swift in Sources */,
 				F051407524142D0400ED57A9 /* URLSessionProtocol.swift in Sources */,
