@@ -14,10 +14,6 @@ enum UserAPI {
 }
 
 extension UserAPI: ServiceTargetProtocol {
-    var baseURL: URL? {
-        return URL(string: "https://api.github.com")
-    }
-    
     var path: String {
         switch self {
         case .search:

@@ -10,7 +10,7 @@ import UIKit
 
 protocol UserListViewDelegate: class {
     func userListView(_ userListView: UserListView, searchTextDidChange: String)
-    func homeView(_ userListView: UserListView, didSelected user: User)
+    func userListView(_ userListView: UserListView, didSelected user: User)
 }
 
 class UserListView: UIView {
@@ -20,7 +20,7 @@ class UserListView: UIView {
     
     weak var delegate: UserListViewDelegate?
     
-    private var users: [User] = []
+    private(set) var users: [User] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,7 +70,7 @@ extension UserListView: UITableViewDataSource {
 extension UserListView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.homeView(self, didSelected: users[indexPath.row])
+        delegate?.userListView(self, didSelected: users[indexPath.row])
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

@@ -8,9 +8,9 @@
 
 import UIKit
 
-class UserListViewController: UIViewController {
+final class UserListViewController: UIViewController {
     
-    private let homeView = UserListView()
+    let userListView = UserListView()
     private let service: UserService
     
     init(service: UserService = UserService()) {
@@ -23,13 +23,13 @@ class UserListViewController: UIViewController {
     }
     
     override func loadView() {
-        view = homeView
+        view = userListView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
-        homeView.delegate = self
+        userListView.delegate = self
     }
     
     private func searchUser(with name: String, page: Int) {
@@ -37,7 +37,7 @@ class UserListViewController: UIViewController {
                            page: page) { [weak self] (result) in
                             switch result {
                             case .success(let users):
-                                self?.homeView.configure(users: users)
+                                self?.userListView.configure(users: users)
                             case .failure(let error):
                                 print(error)
                             }
@@ -47,7 +47,7 @@ class UserListViewController: UIViewController {
 }
 
 extension UserListViewController: UserListViewDelegate {
-    func homeView(_ homeView: UserListView, didSelected user: User) {
+    func userListView(_ homeView: UserListView, didSelected user: User) {
         self.show(UserDetailsViewController(user: user), sender: nil)
     }
     

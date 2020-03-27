@@ -14,3 +14,9 @@ protocol ServiceTargetProtocol {
     var method: HTTPMethod { get }
     var parameters: [String: String] { get }
 }
+
+extension ServiceTargetProtocol {
+    var baseURL: URL? {
+        return URL(string: "https://api.github.com")
+    }
+}

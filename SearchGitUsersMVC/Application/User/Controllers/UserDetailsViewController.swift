@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserDetailsViewController: UIViewController {
+final class UserDetailsViewController: UIViewController {
     
     private var userDetailView = UserDetailsView()
     private var user: User
