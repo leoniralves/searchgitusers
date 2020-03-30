@@ -1,0 +1,26 @@
+{
+    "items": [
+        {
+          "id" : 10001,
+          "organizations_url" : "https://api.github.com/users/userTest/orgs",
+          "score" : 1,
+          "received_events_url" : "https://api.github.com/users/userTest/received_events",
+          "following_url" : "https://api.github.com/users/userTest/following{/other_user}",
+          "login" : "userTest",
+          "avatar_url" : "https://avatars3.githubusercontent.com/u/00000",
+          "url" : "https://api.github.com/users/userTest",
+          "node_id" : "MDQ6VXNlcjYYGBzAw",
+          "subscriptions_url" : "https://api.github.com/users/userTest/subscriptions",
+          "repos_url" : "https://api.github.com/users/userTest/repos",
+          "type" : "User",
+          "html_url" : "https://github.com/userTest",
+          "events_url" : "https://api.github.com/users/userTest/events{/privacy}",
+          "site_admin" : false,
+          "starred_url" : "https://api.github.com/users/userTest/starred{/owner}{/repo}",
+          "gists_url" : "https://api.github.com/users/userTest/gists{/gist_id}",
+          "gravatar_id" : "",
+          "followers_url" : "https://api.github.com/users/userTest/followers"
+        }
+    ]
+}
+

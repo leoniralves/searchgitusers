@@ -70,27 +70,27 @@ class SessionProviderTests: XCTestCase {
     }
     
     func testParseJsonResponse() {
-//        let bundle = Bundle(for: Self.self)
-//        guard let url = bundle.url(forResource: "user", withExtension: "json") else {
-//            XCTFail("Missing file: User.json")
-//            return
-//        }
-//        let data = try? Data(contentsOf: url)
-//        XCTAssertNotNil(data)
-//        
+        let bundle = Bundle(for: Self.self)
+        guard let url = bundle.url(forResource: "user", withExtension: "json") else {
+            XCTFail("Missing file: User.json")
+            return
+        }
+        let data = try? Data(contentsOf: url)
+        XCTAssertNotNil(data)
+
 //        mockURLSession.data = data
-//        
-//        let expectation = XCTestExpectation(description: "Request User data")
-//        sessionProvider.request(type: Users.self,
-//                                service: MockService.mock) { result in
-//            switch result {
-//            case .success(let users):
-//                XCTAssertEqual(users.items[0].login, "leoniralves")
-//            case .failure(let error):
-//                XCTFail("Error: \(error)")
-//            }
-//            expectation.fulfill()
-//        }
-//        wait(for: [expectation], timeout: 10.0)
+
+        let expectation = XCTestExpectation(description: "Request User data")
+        
+        sessionProvider.request(target: MockService.mock) { (result: Result<Users, NetworkError>) in
+            switch result {
+            case .success(let users):
+                XCTAssertEqual(users.items[0].login, "leoniralves")
+            case .failure(let error):
+                XCTFail("Error: \(error)")
+            }
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 10.0)
     }
 }

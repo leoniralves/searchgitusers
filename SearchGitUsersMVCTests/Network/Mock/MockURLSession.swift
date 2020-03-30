@@ -12,7 +12,8 @@ import Foundation
 class MockURLSession: URLSessionProtocol {
     var lastURL: URL?
     var dataTask = MockURLSessionDataTask()
-    var data: Data?
+    
+    private var data: Data?
     
     func successHttpURLResponse(request: URLRequest) -> URLResponse {
         return HTTPURLResponse(url: request.url!,
@@ -28,5 +29,15 @@ class MockURLSession: URLSessionProtocol {
                           successHttpURLResponse(request: request),
                           nil)
         return dataTask
+    }
+    
+    func loadJsonWith(name: String) -> Bool {
+        let bundle = Bundle(for: Self.self)
+        guard let url = bundle.url(forResource: name, withExtension: "json"),
+            let data = try? Data(contentsOf: url) else {
+            return false
+        }
+        self.data = data
+        return true
     }
 }

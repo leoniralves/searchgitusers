@@ -34,8 +34,8 @@ class UserListView: UIView {
     
     func configure(users: Users) {
         self.users = users.items
-        DispatchQueue.main.sync {
-            tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
     }
     

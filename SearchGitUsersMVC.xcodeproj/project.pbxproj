@@ -20,7 +20,6 @@
 		F06408092413DE5900CF53CF /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408082413DE5900CF53CF /* UserListViewController.swift */; };
 		F064080E2413DE5B00CF53CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F064080D2413DE5B00CF53CF /* Assets.xcassets */; };
 		F06408112413DE5B00CF53CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F064080F2413DE5B00CF53CF /* LaunchScreen.storyboard */; };
-		F064081C2413DE5B00CF53CF /* SessionProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064081B2413DE5B00CF53CF /* SessionProviderTests.swift */; };
 		F064082A2413E41700CF53CF /* SessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06408292413E41700CF53CF /* SessionProvider.swift */; };
 		F064082C2413E48E00CF53CF /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064082B2413E48E00CF53CF /* UserApi.swift */; };
 		F064082F2413E62D00CF53CF /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F064082E2413E62D00CF53CF /* ServiceProtocol.swift */; };
@@ -170,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				F074DEB42416905800B22103 /* Mock */,
-				F074DEB0241689E400B22103 /* Json */,
 				F064081B2413DE5B00CF53CF /* SessionProviderTests.swift */,
 			);
 			path = Network;
@@ -386,6 +384,7 @@
 		F0EDB766242D4BA900F690FF /* User */ = {
 			isa = PBXGroup;
 			children = (
+				F074DEB0241689E400B22103 /* Json */,
 				F0EDB767242D4D2A00F690FF /* UserListTest.swift */,
 			);
 			path = User;
@@ -529,7 +528,6 @@
 			files = (
 				F0EDB768242D4D2A00F690FF /* UserListTest.swift in Sources */,
 				F074DEB82416908400B22103 /* MockURLSession.swift in Sources */,
-				F064081C2413DE5B00CF53CF /* SessionProviderTests.swift in Sources */,
 				F074DEB62416907000B22103 /* MockURLSessionDataTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
