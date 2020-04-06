@@ -30,27 +30,30 @@ class UserListTest: XCTestCase {
         XCTAssertEqual(userListViewController.title, "Home")
     }
 
-    func testSearchUserWithLogin() {
+    // testar busca de usuário com sucesso
+    func testSearchUserWithReturnSuccess() throws {
         let expectation = XCTestExpectation(description: "Request User data")
         
         XCTAssertTrue(mockURLSession.loadJsonWith(name: "user"))
         
         let listView = userListViewController.userListView
-        XCTAssertNotNil(listView.searchBar.delegate)
+        let _ = try XCTUnwrap(listView.searchBar.delegate)
         
         listView.searchBar.text = "leoniralves"
         listView.searchBarSearchButtonClicked(listView.searchBar)
 
         expectation.fulfill()
         
-        guard let user = listView.users.first else {
-            XCTFail("No one user!")
-            return
-        }
+        let user = try XCTUnwrap(listView.users.first)
         
         XCTAssertEqual(user.login, "userTest")
-        XCTAssertEqual(user.avatarURL, URL(string: "https://avatars3.githubusercontent.com/u/00000"))
+        XCTAssertEqual(user.avatarURL,
+                       URL(string: "https://avatars3.githubusercontent.com/u/00000"))
         
         wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testSearchUserWithReturnFail() {
+        
     }
 }
